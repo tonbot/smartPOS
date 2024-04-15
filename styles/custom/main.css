@@ -14,14 +14,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+ 
 }
 
 body {
-
   font-family: "Josefin Sans", sans-serif;
   width: 100vw;
   background-color: var(--secondary-color);
+  overflow-x: hidden;
 }
 
 /* bootstrap class override */
@@ -168,12 +168,12 @@ ul {
 }
 
 .stock-action a:hover {
-  padding: 0 20px;
   color: var(--accent4-color);
 }
 
 .stock-table{
-  overflow-x: visible !important;
+  width: 100%;
+  overflow-x: scroll !important;
 }
 
 .stock-table thead tr th {
@@ -187,8 +187,8 @@ ul {
 }
 
 table {
-  /* max-width: 100% !important; */
-  overflow-x: visible !important;
+  width: 100% !important; 
+  overflow-x: scroll !important;
 }
 
 
@@ -198,6 +198,7 @@ table {
   .title-container {
     display: none;
   }
+
 
   .container {
     grid-template-columns: 1fr;
@@ -260,5 +261,17 @@ table {
   .sidebar-wrapper > div {
     font-weight: 700;
   }
+
+  .stock-action a {
+     display: block;
+     padding: 10px 0;
+     text-align: center;
+     border-right: 0;
+  }
+
+  .stock-action  {
+    text-align: center;
+
+ }
   /* DASHBOARD END SMALL SCREEN */
 }
