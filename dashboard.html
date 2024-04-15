@@ -37,17 +37,18 @@
         <!-- sider-bar starts -->
         <div class="sidebar-wrapper">
             <div class="">
-                 ADMIN DASHBOARD
+                ADMIN DASHBOARD
             </div>
             <ul class="nav flex-column">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#"><i class="fa fa-home"></i>Dashboard</a>
+                <li class="nav-item ">
+                    <a class="nav-link active" href="dashboard.html"><i class="fa fa-home"></i>Dashboard</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="manage-stock.html"><i class="fa fa-database"></i>Manage Stock</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-inventory"></i>Inventory</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sales</a>
+                    <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i>Sales Desk</a>
+
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fa fa-user"></i>Customers</a>
@@ -56,27 +57,22 @@
                     <a class="nav-link" href="#"><i class="fa fa-first-order"></i>Orders</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-"></i>Reports</a>
+                    <a class="nav-link" href="#"><i class="fa fa-file"></i>Reports</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Settings</a>
+                    <a class="nav-link" href="#"><i class="fa fa-cog"></i>Settings</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Support</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Logout</a>
-                </li>
+
             </ul>
         </div>
-       <!-- sider-bar ends -->
+        <!-- sider-bar ends -->
 
         <div class="content-wrapper">
             <!-- larger or medium screen -->
             <header class="shadow-sm desktop-header">
                 <p>💢 SMARTPOS</p>
                 <div class="user-profile">
-                    <div class="user-name">Toyin ajiboye  <i class="fa fas fas fa-angle-down"></i></div> 
+                    <div class="user-name">Toyin ajiboye <i class="fa fas fas fa-angle-down"></i></div>
                     <ul class="shadow user-options">
                         <li>
                             <a class="dropdown-item" href="#"><i class="fa fas fas far fa-user"></i> Profile</a>
@@ -97,8 +93,88 @@
                 <h1>💢 SMARTPOS</h1>
                 <i class="fa fa-bars toggle-sidebar"></i>
             </header>
-          
+
+            <!-- dashboard main content starts  -->
+            <div class="main-content px-5 py-5 ">
+                <div class="row report-row">
+                    <!-- Sales Summary Report -->
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <i class="fa fa-chart-line fa-3x"></i> <!-- Replace with your icon -->
+                                    </div>
+                                    <div class="col">
+                                        <p class="card-text mb-1"><small>Sales Summary Report</small></p>
+                                        <p class="card-text mb-1 font-weight-bold">1000</p>
+                                        <p class="card-text"><small>This report </small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Top Selling Products Report -->
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <i class="fa fa-shopping-cart fa-3x"></i> <!-- Replace with your icon -->
+                                    </div>
+                                    <div class="col">
+                                        <p class="card-text mb-1"><small>Top Selling</small></p>
+                                        <p class="card-text mb-1 font-weight-bold">500</p>
+                                        <p class="card-text"><small>Identify your 
+                                                </small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inventory Status Report -->
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <i class="fa fa-database fa-3x"></i> <!-- Replace with your icon -->
+                                    </div>
+                                    <div class="col">
+                                        <p class="card-text mb-1"><small>Stock Status </small></p>
+                                        <p class="card-text mb-1 font-weight-bold">200</p>
+                                        <p class="card-text"><small>Keep trackels 
+                                                st</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profit and Loss Report -->
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <i class="fa fa-chart-bar fa-3x"></i> 
+                                    </div>
+                                    <div class="col">
+                                        <p class="card-text mb-1"><small>Profit and Loss Report</small></p>
+                                        <p class="card-text mb-1 font-weight-bold">$10,000</p>
+                                        <p class="card-text"><small>Understand your</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
+        <!-- dashboard main content ends  -->
+
+    </div>
     </div>
 
     <!-- jquery 3.7.1-->

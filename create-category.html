@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Ajiboye Toyin Theophilus">
+<meta name="description"
+    content="Unlock a New Era of Transactional Excellence with SmartPOS: Empowering Businesses with Advanced Technology, Intuitive Functionality, and Unparalleled Efficiency, Redefining the Landscape of Commerce">
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Scoot - Connect With Us">
+<meta property="og:type" content="website">
+<meta property="og:image" content="">
+<meta property="og:url" content="https://tonbot.github.io/wdd230/smart-pos/">
+
+<title>Smart - Dashboard</title>
+<link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+
+<!-- library css -->
+<link href="styles/lib/normalize.css" rel="stylesheet">
+<link href="styles/lib/bootstrap.min.css" rel="stylesheet">
+
+<!-- google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+
+<!-- font awesome -->
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- custome css -->
+<link href="styles/custom/main.css" rel="stylesheet">
+<link href="styles/custom/larger.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="mother-wrapper">
+        <!-- sider-bar starts -->
+        <div class="sidebar-wrapper">
+            <div class="">
+                ADMIN DASHBOARD
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item ">
+                    <a class="nav-link " href="dashboard.html"><i class="fa fa-home"></i>Dashboard</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link active" href="manage-stock.html"><i class="fa fa-database"></i>Manage Stock</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i>Sales Desk</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-user"></i>Customers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-first-order"></i>Orders</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-file"></i>Reports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-cog"></i>Settings</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- sider-bar ends -->
+
+        <div class="content-wrapper">
+            <!-- larger or medium screen -->
+            <header class="shadow-sm desktop-header">
+                <p>💢 SMARTPOS</p>
+                <div class="user-profile">
+                    <div class="user-name">Toyin ajiboye <i class="fa fas fas fa-angle-down"></i></div>
+                    <ul class="shadow user-options">
+                        <li>
+                            <a class="dropdown-item" href="#"><i class="fa fas fas far fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"><i class="fa fas fas far fas fa-cog"></i> Settings</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"><i class="fa fas fas far fas fas fa-sign-out"></i>
+                                Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+            <!-- mobile or small screen -->
+            <header class="shadow-sm mobile-header">
+                <h1>💢 SMARTPOS</h1>
+                <i class="fa fa-bars toggle-sidebar"></i>
+            </header>
+
+            <!-- dashboard main content starts  -->
+            <div class="main-content p-5">
+                <h2 class="mb-4 pb-2">Stock Category</h2>
+                
+                 <!-- action button -->
+                <div class="row mb-4 bg-white py-4 shadow-sm align-items-center">
+                    <div class="col ">
+                        <button type="button" class="btn mb-2 shadow " id="showAddCategoryModal">
+                            <i class="fa fa-plus"></i> Add Category
+                        </button>
+                    </div>
+                </div>
+
+                <!-- DataTable for Previous Stock -->
+                <div class="row bg-white shadow-sm stock-table">
+                    <div class="col">
+                        <table id="stockTable" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>Category-Id</th>
+                                    <th>Category Name</th>
+                                    <th>Date-Created</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Sample row, replace with data from your database -->
+                                <tr>
+                                    <td>1</td>
+                                    <td>005</td>
+                                    <td>Others</td>
+                                    <td>24-04-2024</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
+                                            data-target="#editItemModal">
+                                            Edit
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>006</td>
+                                    <td>Food</td>
+                                    <td>24-04-2024</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
+                                            data-target="#editItemModal">
+                                            Edit
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Add Stock Modal -->
+                <div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog"
+                    aria-labelledby="addCategoryModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="addStockModalLabel">Add Category</h5>
+                            </div>
+                            <div class="modal-body">
+                                <form id="addStockForm" class="p-4">
+                                    <!-- Item Name -->
+                                    <div class="form-group">
+                                        <label for="itemName">Category Name</label>
+                                        <input type="text" class="form-control" id="itemName" name="itemName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="itemName">Category description</label>
+                                        <input type="text" class="form-control" id="itemName" name="itemName" required>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn" id="closeAddCategoryModal">Close</button>
+                                <button type="submit" form="addStockForm" class="btn">Add Category</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- dashboard main content ends  -->
+
+        </div>
+    </div>
+
+    <!-- jquery 3.7.1-->
+    <script src="scripts/lib/jquery.min.js"></script>
+    <!-- bootstrap 5.3.3 -->
+    <script src="scripts/lib/bootstrap.min.js"></script>
+    <!-- scroll-magic 5.3.3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <!-- gsap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- main js -->
+    <script src="scripts/custom/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            //open add stock modal
+            $("#showAddCategoryModal").click(function () {
+                $("#addCategoryModal").modal("show");
+            });
+            //close add stock modal 
+            $("#closeAddCategoryModal").click(function () {
+                $("#addCategoryModal").modal("hide");
+            });
+        });
+    </script>
+</body>
+
+</html>

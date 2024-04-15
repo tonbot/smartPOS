@@ -10,4 +10,10 @@ $(document).ready(function() {
         gsap.to(".sidebar-wrapper", {x: "250px", duration: 1});
         show = true;
     });
+
+    $("#showAddStockModal").click(function() {
+        $("#addStockModal").modal("show");
+      });
+
+      
   });
