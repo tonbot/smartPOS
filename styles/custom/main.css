@@ -14,10 +14,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
-  overflow-x: hidden;
+
   font-family: "Josefin Sans", sans-serif;
   width: 100vw;
   background-color: var(--secondary-color);
@@ -171,6 +172,9 @@ ul {
   color: var(--accent4-color);
 }
 
+.stock-table{
+  overflow-x: visible !important;
+}
 
 .stock-table thead tr th {
   font-size: 0.9em !important;
@@ -181,6 +185,13 @@ ul {
   font-size: 0.8em !important;
   font-weight: 400;
 }
+
+table {
+  /* max-width: 100% !important; */
+  overflow-x: visible !important;
+}
+
+
 /* DASHBOARD END BIG SCREEN */
 
 @media screen and (max-width: 600px) {
