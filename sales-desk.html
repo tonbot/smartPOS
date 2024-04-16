@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Ajiboye Toyin Theophilus">
+<meta name="description"
+    content="Unlock a New Era of Transactional Excellence with SmartPOS: Empowering Businesses with Advanced Technology, Intuitive Functionality, and Unparalleled Efficiency, Redefining the Landscape of Commerce">
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Scoot - Connect With Us">
+<meta property="og:type" content="website">
+<meta property="og:image" content="">
+<meta property="og:url" content="https://tonbot.github.io/wdd230/smart-pos/">
+
+<title>Smart - Dashboard</title>
+<link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+
+<!-- library css -->
+<link href="styles/lib/normalize.css" rel="stylesheet">
+<link href="styles/lib/bootstrap.min.css" rel="stylesheet">
+
+<!-- google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+
+<!-- font awesome -->
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- custome css -->
+<link href="styles/custom/main.css" rel="stylesheet">
+<link href="styles/custom/larger.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="mother-wrapper-sales">
+
+        <div class="content-wrapper">
+            <!-- larger or medium screen -->
+            <header class="shadow-sm desktop-header">
+                <p>💢 SMARTPOS</p>
+                <div class="user-profile">
+                    <div class="user-name">Toyin ajiboye <i class="fa fas fas fa-angle-down"></i></div>
+                    <ul class="shadow user-options">
+                        <li>
+                            <a class="dropdown-item" href="#"><i class="fa fas fas far fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"><i class="fa fas fas far fas fa-cog"></i> Settings</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"><i class="fa fas fas far fas fas fa-sign-out"></i>
+                                Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+            <!-- mobile or small screen -->
+            <header class="shadow-sm mobile-header">
+                <h1>💢 SMARTPOS</h1>
+                <i class="fa fa-bars toggle-sidebar"></i>
+            </header>
+
+            <!-- dashboard main content starts  -->
+            <div class="main-content p-5">
+
+                <div class="mb-4 pb-2 stock-desk-title">
+                    <h2>🚨 Sales Desk</h2>
+                    <div class="input-group w-50 mb-3">
+                        <input type="text" class="form-control" placeholder="Search for products" aria-label="Search" aria-describedby="button-addon2">
+                        <button class="btn" type="button" id="button-addon2">Search</button>
+                    </div>
+                    <a href="dashboard.html"><i class="fa fa-arrow-left"></i> return home</a>
+                </div>
+
+
+                <!-- Product Categories List -->
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="card mb-4">
+                            <div class="card-header">Categories</div>
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item"><a href="#" class="category-link"
+                                            data-category="all">All Products</a></li>
+                                    <li class="list-group-item"><a href="#" class="category-link"
+                                            data-category="electronics">Electronics</a></li>
+                                    <li class="list-group-item"><a href="#" class="category-link"
+                                            data-category="clothing">Clothing</a></li>
+                                    <!-- Add more categories as needed -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Catalog -->
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-header">Product Catalog</div>
+                            <div class="card-body">
+                                <!-- Product catalog content will be dynamically populated based on selected category -->
+                                <div class="row" id="product-catalog">
+                                    <div class="col-4 py-3">
+                                        <div class="product-item text-center">
+                                            <img src="images/stock-image.webp" alt="Product 1" class="product-img"
+                                                width="60" height="58">
+                                            <div>Product 1</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 py-3">
+                                        <div class="product-item text-center">
+                                            <img src="images/stock-image.webp" alt="Product 1" class="product-img"
+                                                width="60" height="58">
+                                            <div>Product 2</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 py-3">
+                                        <div class="product-item text-center">
+                                            <img src="images/stock-image.webp" alt="Product 1" class="product-img"
+                                                width="60" height="58">
+                                            <div>Product 3</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 py-3">
+                                        <div class="product-item text-center">
+                                            <img src="images/stock-image.webp" alt="Product 1" class="product-img"
+                                                width="60" height="58">
+                                            <div>Product 3</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 py-3">
+                                        <div class="product-item text-center">
+                                            <img src="images/stock-image.webp" alt="Product 1" class="product-img"
+                                                width="60" height="58">
+                                            <div>Product 3</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 py-3">
+                                        <div class="product-item text-center">
+                                            <img src="images/stock-image.webp" alt="Product 1" class="product-img"
+                                                width="60" height="58">
+                                            <div>Product 3</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart Section -->
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">Cart</div>
+                            <div class="card-body">
+                                <table class="table cart-table ">
+                                    <thead>
+                                        <tr>
+                                            <th>Product Name</th>
+                                            <th>Quantity (num)</th>
+                                            <th>Unit Price (#)</th>
+                                            <th>Total Price (#)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="cart-item">
+                                            <td class="prod-name">Product-9999999</td>
+                                            <td class="quantity-container">
+                                                <i class="fa fa-plus"></i><input type="text"><i class="fa fa-minus"></i>
+                                            </td>
+                                            <td class="unit-price">50000.00</td>
+                                            <td class="amount">4000.00</td>
+                                        </tr>
+                                        <tr class="cart-item">
+                                            <td class="prod-name">Product</td>
+                                            <td class="quantity-container">
+                                                <i class="fa fa-plus"></i><input type="text"><i class="fa fa-minus"></i>
+                                            </td>
+                                            <td class="unit-price">50000.00</td>
+                                            <td class="amount">4000.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                            
+                                <!-- Total sum -->
+                                <div class="pt-5 text-end total-sume-wrapper">
+                                    <strong>Total: $<span id="total-sum">0.00</span></strong>
+                                </div>
+                                <!-- Payment button -->
+                                <div class="text-end">
+                                    <button type="button" class="btn mt-3">Make Payment</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- dashboard main content ends  -->
+
+        </div>
+    </div>
+
+    <!-- jquery 3.7.1-->
+    <script src="scripts/lib/jquery.min.js"></script>
+    <!-- bootstrap 5.3.3 -->
+    <script src="scripts/lib/bootstrap.min.js"></script>
+    <!-- scroll-magic 5.3.3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <!-- gsap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- main js -->
+    <script src="scripts/custom/main.js"></script>
+
+
+</body>
+
+</html>

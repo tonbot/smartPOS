@@ -14,7 +14,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
- 
 }
 
 body {
@@ -148,15 +147,33 @@ ul {
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 
+.stock-desk-title {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stock-desk-title > h2 {
+  font-size: 1.2em;
+}
+
+.stock-desk-title a {
+  color: var(--accent3-color);
+}
+.stock-desk-title a .fa {
+  color: var(--accent4-color);
+}
+
 .btn {
   font-size: 0.9em !important;
 }
 
- a{
-   text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-.stock-action a .fa{
+.stock-action a .fa {
   font-size: 10px;
   color: var(--accent4-color);
 }
@@ -171,7 +188,7 @@ ul {
   color: var(--accent4-color);
 }
 
-.stock-table{
+.stock-table {
   width: 100%;
   overflow-x: scroll !important;
 }
@@ -187,18 +204,46 @@ ul {
 }
 
 table {
-  width: 100% !important; 
+  width: 100% !important;
   overflow-x: scroll !important;
 }
 
 
+.cart-table thead tr th {
+  font-size: 0.7em !important;
+  font-weight: 800;
+}
+
+.prod-name,
+.unit-price,
+.amount {
+  font-size: 0.7em;
+  align-items: center;
+}
+.cart-item .fa:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+.cart-item input[type="text"] {
+  width: 20px;
+  height: 22px;
+  text-align: center;
+  font-size: 0.8em;
+  outline: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.cart-item .fa {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 3px;
+  font-size: 0.8em;
+}
 /* DASHBOARD END BIG SCREEN */
 
 @media screen and (max-width: 600px) {
   .title-container {
     display: none;
   }
-
 
   .container {
     grid-template-columns: 1fr;
@@ -263,15 +308,14 @@ table {
   }
 
   .stock-action a {
-     display: block;
-     padding: 10px 0;
-     text-align: center;
-     border-right: 0;
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    border-right: 0;
   }
 
-  .stock-action  {
+  .stock-action {
     text-align: center;
-
- }
+  }
   /* DASHBOARD END SMALL SCREEN */
 }
