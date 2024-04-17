@@ -220,13 +220,18 @@ table {
   font-size: 0.7em;
   align-items: center;
 }
+.cart-item .fa-close {
+  background-color:var(--accent4-color);
+  color: #fff;
+}
 .cart-item .fa:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.06);
   color: #000;
 }
+
 .cart-item input[type="text"] {
   width: 20px;
-  height: 22px;
+ height: 22px;
   text-align: center;
   font-size: 0.8em;
   outline: 0;
@@ -237,6 +242,13 @@ table {
   text-align: center;
   padding: 3px;
   font-size: 0.8em;
+}
+.product-item{
+padding: 20px;
+border-radius: 10px;
+}
+.product-item:hover{
+  background-color: rgba(0, 0, 0, 0.06)
 }
 /* DASHBOARD END BIG SCREEN */
 
@@ -318,4 +330,8 @@ table {
     text-align: center;
   }
   /* DASHBOARD END SMALL SCREEN */
+
+  .search-wrapper{
+    display: none;
+  }
 }

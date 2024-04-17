@@ -29,6 +29,7 @@
 
 <!-- custome css -->
 <link href="styles/custom/main.css" rel="stylesheet">
+<link href="styles/custom/medium.css" rel="stylesheet">
 <link href="styles/custom/larger.css" rel="stylesheet">
 </head>
 
@@ -63,17 +64,16 @@
             </header>
 
             <!-- dashboard main content starts  -->
-            <div class="main-content p-5">
-
+            <div class="main-content p-3 py-5 p-md-5">
                 <div class="mb-4 pb-2 stock-desk-title">
                     <h2>🚨 Sales Desk</h2>
-                    <div class="input-group w-50 mb-3">
-                        <input type="text" class="form-control" placeholder="Search for products" aria-label="Search" aria-describedby="button-addon2">
+                    <div class="input-group w-50 mb-3 search-wrapper">
+                        <input type="text" class="form-control" placeholder="Search for products" aria-label="Search"
+                            aria-describedby="button-addon2">
                         <button class="btn" type="button" id="button-addon2">Search</button>
                     </div>
                     <a href="dashboard.html"><i class="fa fa-arrow-left"></i> return home</a>
                 </div>
-
 
                 <!-- Product Categories List -->
                 <div class="row">
@@ -88,58 +88,69 @@
                                             data-category="electronics">Electronics</a></li>
                                     <li class="list-group-item"><a href="#" class="category-link"
                                             data-category="clothing">Clothing</a></li>
+                                            <li class="list-group-item"><a href="#" class="category-link"
+                                                data-category="clothing">Others</a></li>
                                     <!-- Add more categories as needed -->
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <!-- Product Catalog -->
+
+                    <!-- Product Catalog Section -->
                     <div class="col-md-6">
                         <div class="card mb-4">
                             <div class="card-header">Product Catalog</div>
                             <div class="card-body">
-                                <!-- Product catalog content will be dynamically populated based on selected category -->
                                 <div class="row" id="product-catalog">
-                                    <div class="col-4 py-3">
+                                    <div class="col-6 col-md-4 py-3">
                                         <div class="product-item text-center">
                                             <img src="images/stock-image.webp" alt="Product 1" class="product-img"
                                                 width="60" height="58">
-                                            <div>Product 1</div>
+                                            <div class="prod-name">Product 5</div>
+                                            <span class="prod-id" hidden>5</span>
+                                            <span class="unit-price" hidden>1000.00</span>
+                                            <span class="category-id" hidden>1</span>
                                         </div>
                                     </div>
-                                    <div class="col-4 py-3">
+                                    <div class="col-6 col-md-4 py-3">
                                         <div class="product-item text-center">
                                             <img src="images/stock-image.webp" alt="Product 1" class="product-img"
                                                 width="60" height="58">
-                                            <div>Product 2</div>
+                                            <div class="prod-name">Product 4</div>
+                                            <span class="prod-id" hidden>4</span>
+                                            <span class="unit-price" hidden>1000.00</span>
+                                            <span class="category-id" hidden>1</span>
                                         </div>
                                     </div>
-                                    <div class="col-4 py-3">
+                                    <div class="col-6 col-md-4 py-3">
                                         <div class="product-item text-center">
                                             <img src="images/stock-image.webp" alt="Product 1" class="product-img"
                                                 width="60" height="58">
-                                            <div>Product 3</div>
+                                            <div class="prod-name">Product 1</div>
+                                            <span class="prod-id" hidden>1</span>
+                                            <span class="unit-price" hidden>1000.00</span>
+                                            <span class="category-id" hidden>1</span>
+                                            <span class="prod-id" hidden>1</span>
                                         </div>
                                     </div>
-                                    <div class="col-4 py-3">
+                                    <div class="col-6 col-md-4 py-3">
                                         <div class="product-item text-center">
                                             <img src="images/stock-image.webp" alt="Product 1" class="product-img"
                                                 width="60" height="58">
-                                            <div>Product 3</div>
+                                            <div class="prod-name">Product 2</div>
+                                            <span class="prod-id" hidden>2</span>
+                                            <span class="unit-price" hidden>1000.00</span>
+                                            <span class="category-id" hidden>1</span>
                                         </div>
                                     </div>
-                                    <div class="col-4 py-3">
+                                    <div class="col-6 col-md-4 py-3">
                                         <div class="product-item text-center">
                                             <img src="images/stock-image.webp" alt="Product 1" class="product-img"
                                                 width="60" height="58">
-                                            <div>Product 3</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 py-3">
-                                        <div class="product-item text-center">
-                                            <img src="images/stock-image.webp" alt="Product 1" class="product-img"
-                                                width="60" height="58">
-                                            <div>Product 3</div>
+                                            <div class="prod-name">Product 3</div>
+                                            <span class="prod-id" hidden>3</span>
+                                            <span class="unit-price" hidden>1000.00</span>
+                                            <span class="category-id" hidden>1</span>
                                         </div>
                                     </div>
                                 </div>
@@ -148,14 +159,14 @@
                     </div>
 
                     <!-- Cart Section -->
-
                     <div class="col-md-4">
                         <div class="card">
                             <div class="card-header">Cart</div>
                             <div class="card-body">
-                                <table class="table cart-table ">
+                                <table class="table cart-table">
                                     <thead>
                                         <tr>
+                                            <th>Drop Item</th>
                                             <th>Product Name</th>
                                             <th>Quantity (num)</th>
                                             <th>Unit Price (#)</th>
@@ -163,29 +174,14 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="cart-item">
-                                            <td class="prod-name">Product-9999999</td>
-                                            <td class="quantity-container">
-                                                <i class="fa fa-plus"></i><input type="text"><i class="fa fa-minus"></i>
-                                            </td>
-                                            <td class="unit-price">50000.00</td>
-                                            <td class="amount">4000.00</td>
-                                        </tr>
-                                        <tr class="cart-item">
-                                            <td class="prod-name">Product</td>
-                                            <td class="quantity-container">
-                                                <i class="fa fa-plus"></i><input type="text"><i class="fa fa-minus"></i>
-                                            </td>
-                                            <td class="unit-price">50000.00</td>
-                                            <td class="amount">4000.00</td>
-                                        </tr>
+
                                     </tbody>
                                 </table>
-                                
-                            
+
+
                                 <!-- Total sum -->
                                 <div class="pt-5 text-end total-sume-wrapper">
-                                    <strong>Total: $<span id="total-sum">0.00</span></strong>
+                                    <strong>Total: $<span id="total-sum" class="total-sum">0.00</span></strong>
                                 </div>
                                 <!-- Payment button -->
                                 <div class="text-end">
@@ -215,6 +211,88 @@
     <!-- main js -->
     <script src="scripts/custom/main.js"></script>
 
+    <script>
+        $(document).ready(function () {
+            var addedProductIds = [];
+            //Remove product from cart
+            $('.cart-table').on('click', '.drop-item', function () {
+                var $cartItem = $(this).closest('.cart-item');
+                var removedProductId = $cartItem.attr('data-id');
+                var index = addedProductIds.indexOf(removedProductId);
+                if (index !== -1) {
+                    addedProductIds.splice(index, 1);
+                }
+                $cartItem.remove();
+
+                // Update the total sum
+                calculateTotalSum();
+            });
+
+            //Add product to cart
+            $('.product-item').click(function () {
+                var productId = $(this).children('.prod-id').text();
+                //check if product already in the cart
+                if (addedProductIds.includes(productId)) {
+                    alert('Product is already added to the cart.');
+                    return;
+                }
+                addedProductIds.push(productId);
+                var productName = $(this).children('.prod-name').text();
+                var unitPrice = $(this).children('.unit-price').text();
+                var categoryId = $(this).children('.categoryid').text();
+                var productId = $(this).children('.prod-id').text();
+
+                // Create HTML for cart item
+                var cartItemHtml = '<tr class="cart-item" data-id=' + productId + '>' +
+                    '<td><i class="fa fa-close drop-item"></i></td>' +
+                    '<td class="prod-name">' + productName + '</td>' +
+                    '<td class="quantity-container">' +
+                    '<i class="fa fa-plus prod-increase"></i><input type="text" value="1" name="qty[]" class="qty"><i class="fa fa-minus prod-decrease"></i>' +
+                    '</td>' +
+                    '<td class="unit-price">' + unitPrice + '</td>' +
+                    '<td class="amount" name="amount[]">'+ unitPrice + '</td>' +
+                    '<span class="prod-id" name="prod-id[]">' + productId + '</span>' +
+                    '<span name="category-id[]">' + categoryId + '</span>' +
+                    '</tr>';
+                $('.cart-table tbody').append(cartItemHtml);
+
+                 // Update the total sum
+        calculateTotalSum();
+            });
+
+           //increase and decrease product quantity
+            $('.cart-table').on('click', '.quantity-container i', function () {
+                var $cartItem = $(this).closest('.cart-item');
+                var $quantityInput = $cartItem.children('.quantity-container').children('.qty');
+                var currentQuantity = parseInt($quantityInput.val());
+                  // Update the quantity based on the clicked button
+                  if ($(this).hasClass('fa-plus')) {
+                    currentQuantity++;
+                } else if ($(this).hasClass('fa-minus') && currentQuantity > 1) {
+                    currentQuantity--;
+                }
+                // Find the unit price and calculate the amount
+                var unitPrice = parseFloat($cartItem.find('.unit-price').text());
+                var amount = currentQuantity * unitPrice;
+                // Update the input field and amount
+                $quantityInput.val(currentQuantity);
+                $cartItem.find('.amount').text(amount.toFixed(2));
+                 // Calculate the total sum
+                 calculateTotalSum();
+            });
+
+            // Function to calculate the total sum
+            function calculateTotalSum() {
+                var totalSum = 0;
+                $('.cart-item').each(function () {
+                    var amount = parseFloat($(this).find('.amount').text());
+                    totalSum += amount;
+                });
+                $('.total-sum').text(totalSum.toFixed(2));
+            }
+
+        });
+    </script>
 
 </body>
 
