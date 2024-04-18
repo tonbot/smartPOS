@@ -35,8 +35,8 @@
 
 <body>
     <div class="mother-wrapper">
-       <!-- sider-bar starts -->
-       <div class="sidebar-wrapper">
+      <!-- sider-bar starts -->
+      <div class="sidebar-wrapper">
         <div class="">
             ADMIN DASHBOARD
         </div>
@@ -67,7 +67,6 @@
     </div>
     <!-- sider-bar ends -->
 
-
         <div class="content-wrapper">
             <!-- larger or medium screen -->
             <header class="shadow-sm desktop-header">
@@ -96,86 +95,94 @@
             </header>
 
             <!-- dashboard main content starts  -->
-            <div class="main-content px-5 py-5 ">
-                <div class="row report-row">
-                    <!-- Sales Summary Report -->
-                    <div class="col-md-6 col-lg-3 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <i class="fa fa-chart-line fa-3x"></i> <!-- Replace with your icon -->
-                                    </div>
-                                    <div class="col">
-                                        <p class="card-text mb-1"><small>Sales Summary Report</small></p>
-                                        <p class="card-text mb-1 font-weight-bold">1000</p>
-                                        <p class="card-text"><small>This report </small></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="main-content p-5">
+                <h2 class="mb-4 pb-2">Stock Category</h2>
+                
+                 <!-- action button -->
+                <div class="row mb-4 bg-white py-4 shadow-sm align-items-center">
+                    <div class="col ">
+                        <button type="button" class="btn mb-2 shadow " id="showAddCategoryModal">
+                            <i class="fa fa-plus"></i> Add Category
+                        </button>
                     </div>
+                </div>
 
-                    <!-- Top Selling Products Report -->
-                    <div class="col-md-6 col-lg-3 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <i class="fa fa-shopping-cart fa-3x"></i> <!-- Replace with your icon -->
-                                    </div>
-                                    <div class="col">
-                                        <p class="card-text mb-1"><small>Top Selling</small></p>
-                                        <p class="card-text mb-1 font-weight-bold">500</p>
-                                        <p class="card-text"><small>Identify your 
-                                                </small></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <!-- DataTable for Previous Stock -->
+                <div class="row bg-white shadow-sm stock-table">
+                    <div class="col">
+                        <table id="stockTable" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>Category-Id</th>
+                                    <th>Category Name</th>
+                                    <th>Date-Created</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Sample row, replace with data from your database -->
+                                <tr>
+                                    <td>1</td>
+                                    <td>005</td>
+                                    <td>Others</td>
+                                    <td>24-04-2024</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
+                                            data-target="#editItemModal">
+                                            Edit
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>006</td>
+                                    <td>Food</td>
+                                    <td>24-04-2024</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
+                                            data-target="#editItemModal">
+                                            Edit
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
+                </div>
 
-                    <!-- Inventory Status Report -->
-                    <div class="col-md-6 col-lg-3 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <i class="fa fa-database fa-3x"></i> <!-- Replace with your icon -->
-                                    </div>
-                                    <div class="col">
-                                        <p class="card-text mb-1"><small>Stock Status </small></p>
-                                        <p class="card-text mb-1 font-weight-bold">200</p>
-                                        <p class="card-text"><small>Keep trackels 
-                                                st</small></p>
-                                    </div>
-                                </div>
+                <!-- Add Stock Modal -->
+                <div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog"
+                    aria-labelledby="addCategoryModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="addStockModalLabel">Add Category</h5>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Profit and Loss Report -->
-                    <div class="col-md-6 col-lg-3 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <i class="fa fa-chart-bar fa-3x"></i> 
+                            <div class="modal-body">
+                                <form id="addStockForm" class="p-4">
+                                    <!-- Item Name -->
+                                    <div class="form-group">
+                                        <label for="itemName">Category Name</label>
+                                        <input type="text" class="form-control" id="itemName" name="itemName" required>
                                     </div>
-                                    <div class="col">
-                                        <p class="card-text mb-1"><small>Profit and Loss Report</small></p>
-                                        <p class="card-text mb-1 font-weight-bold">$10,000</p>
-                                        <p class="card-text"><small>Understand your</small></p>
+                                    <div class="form-group">
+                                        <label for="itemName">Category description</label>
+                                        <input type="text" class="form-control" id="itemName" name="itemName" required>
                                     </div>
-                                </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn" id="closeAddCategoryModal">Close</button>
+                                <button type="submit" form="addStockForm" class="btn">Add Category</button>
                             </div>
                         </div>
                     </div>
                 </div>
-        </div>
-        <!-- dashboard main content ends  -->
+            </div>
+            <!-- dashboard main content ends  -->
 
-    </div>
+        </div>
     </div>
 
     <!-- jquery 3.7.1-->
@@ -190,6 +197,19 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- main js -->
     <script src="scripts/custom/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            //open add stock modal
+            $("#showAddCategoryModal").click(function () {
+                $("#addCategoryModal").modal("show");
+            });
+            //close add stock modal 
+            $("#closeAddCategoryModal").click(function () {
+                $("#addCategoryModal").modal("hide");
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -35,37 +35,37 @@
 
 <body>
     <div class="mother-wrapper">
-        <!-- sider-bar starts -->
-        <div class="sidebar-wrapper">
-            <div class="">
-                ADMIN DASHBOARD
-            </div>
-            <ul class="nav flex-column">
-                <li class="nav-item ">
-                    <a class="nav-link " href="dashboard.html"><i class="fa fa-home"></i>Dashboard</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link active" href="manage-stock.html"><i class="fa fa-database"></i>Manage Stock</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="sales-desk.html"><i class="fa fa-shopping-cart"></i>Sales Desk</a>
-
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-user"></i>Customers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="sales-report"><i class="fa fa-first-order"></i>Sales Report</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="stock-category.html"><i class="fa fa-cog"></i>Stock Category</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="manage-user.html"><i class="fa fa-user"></i>Manage User</a>
-                </li>
-            </ul>
+     <!-- sider-bar starts -->
+     <div class="sidebar-wrapper">
+        <div class="">
+            ADMIN DASHBOARD
         </div>
-        <!-- sider-bar ends -->
+        <ul class="nav flex-column">
+            <li class="nav-item ">
+                <a class="nav-link " href="dashboard.html"><i class="fa fa-home"></i>Dashboard</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link active" href="manage-stock.html"><i class="fa fa-database"></i>Manage Stock</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sales-desk.html"><i class="fa fa-shopping-cart"></i>Sales Desk</a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa fa-user"></i>Customers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sales-report"><i class="fa fa-first-order"></i>Sales Report</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="stock-category.html"><i class="fa fa-cog"></i>Stock Category</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="manage-user.html"><i class="fa fa-user"></i>Manage User</a>
+            </li>
+        </ul>
+    </div>
+    <!-- sider-bar ends -->
 
         <div class="content-wrapper">
             <!-- larger or medium screen -->
@@ -96,19 +96,14 @@
 
             <!-- dashboard main content starts  -->
             <div class="main-content p-3 py-5 p-md-5">
-                <h2 class="mb-4 pb-2">Manage Stock</h2>
+                <h2 class="mb-4 pb-2">Sales Report</h2>
 
                 <!-- action button -->
                 <div class="row mb-4 bg-white py-4 shadow-sm align-items-center stock-action">
                     <div class="col ">
-                        <button type="button" class="btn mb-2 shadow " id="showAddStockModal">
-                            <i class="fa fa-plus"></i> Add Stock
-                        </button>
-
-                        <a href="stock-category.html"> <i class="fa fa-plus"></i> create category</a>
-                      
-                        <a href="stock-sub-category.html"> <i class="fa fa-plus"></i> create sub-category</a>
-
+                        <div class="input-group w-75">
+                           <label for="" class="p-2">From: </label> <input class="form-control" type="text"><label for="" class="p-2">To: </label>  <input class="form-control" type="text"><button class="btn">View</button>
+                        </div>
                     </div>
                 </div>
 

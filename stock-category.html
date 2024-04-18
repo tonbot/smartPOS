@@ -95,20 +95,15 @@
             </header>
 
             <!-- dashboard main content starts  -->
-            <div class="main-content p-3 py-5 p-md-5">
-                <h2 class="mb-4 pb-2">Manage Stock</h2>
-
-                <!-- action button -->
-                <div class="row mb-4 bg-white py-4 shadow-sm align-items-center stock-action">
+            <div class="main-content p-5">
+                <h2 class="mb-4 pb-2">Stock Category</h2>
+                
+                 <!-- action button -->
+                <div class="row mb-4 bg-white py-4 shadow-sm align-items-center">
                     <div class="col ">
-                        <button type="button" class="btn mb-2 shadow " id="showAddStockModal">
-                            <i class="fa fa-plus"></i> Add Stock
+                        <button type="button" class="btn mb-2 shadow " id="showAddCategoryModal">
+                            <i class="fa fa-plus"></i> Add Category
                         </button>
-
-                        <a href="stock-category.html"> <i class="fa fa-plus"></i> create category</a>
-                      
-                        <a href="stock-sub-category.html"> <i class="fa fa-plus"></i> create sub-category</a>
-
                     </div>
                 </div>
 
@@ -119,10 +114,9 @@
                             <thead>
                                 <tr>
                                     <th>S/N</th>
-                                    <th>Stock-Id</th>
-                                    <th>Item Name</th>
-                                    <th>Category</th>
-                                    <th>Quantity</th>
+                                    <th>Category-Id</th>
+                                    <th>Category Name</th>
+                                    <th>Date-Created</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -130,10 +124,9 @@
                                 <!-- Sample row, replace with data from your database -->
                                 <tr>
                                     <td>1</td>
-                                    <td>001</td>
-                                    <td>Yale Biscuit</td>
-                                    <td>Biscuit</td>
-                                    <td>100</td>
+                                    <td>005</td>
+                                    <td>Others</td>
+                                    <td>24-04-2024</td>
                                     <td>
                                         <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
                                             data-target="#editItemModal">
@@ -142,11 +135,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>2</td>
-                                    <td>002</td>
-                                    <td>Egg Biscuit</td>
+                                    <td>1</td>
+                                    <td>006</td>
                                     <td>Food</td>
-                                    <td>2crates</td>
+                                    <td>24-04-2024</td>
                                     <td>
                                         <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
                                             data-target="#editItemModal">
@@ -160,48 +152,29 @@
                 </div>
 
                 <!-- Add Stock Modal -->
-                <div class="modal fade" id="addStockModal" tabindex="-1" role="dialog"
-                    aria-labelledby="addStockModalLabel" aria-hidden="true">
+                <div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog"
+                    aria-labelledby="addCategoryModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="addStockModalLabel">Add Stock</h5>
+                                <h5 class="modal-title" id="addStockModalLabel">Add Category</h5>
                             </div>
                             <div class="modal-body">
                                 <form id="addStockForm" class="p-4">
                                     <!-- Item Name -->
                                     <div class="form-group">
-                                        <label for="itemName">Item Name</label>
+                                        <label for="itemName">Category Name</label>
                                         <input type="text" class="form-control" id="itemName" name="itemName" required>
                                     </div>
-                                    <!-- Category -->
                                     <div class="form-group">
-                                        <label for="category">Category</label>
-                                        <select class="form-control" id="category" name="category" required>
-                                            <option value="">Select Category</option>
-                                            <!-- Add options dynamically from your database -->
-                                            <option value="category1">Category 1</option>
-                                            <option value="category2">Category 2</option>
-                                            <!-- Add more options as needed -->
-                                        </select>
-                                    </div>
-                                    <!-- Quantity -->
-                                    <div class="form-group">
-                                        <label for="quantity">Quantity</label>
-                                        <input type="number" class="form-control" id="quantity" name="quantity"
-                                            required>
-                                    </div>
-                                    <!-- Unit Price -->
-                                    <div class="form-group">
-                                        <label for="unitPrice">Unit Price</label>
-                                        <input type="number" class="form-control" id="unitPrice" name="unitPrice"
-                                            required>
+                                        <label for="itemName">Category description</label>
+                                        <input type="text" class="form-control" id="itemName" name="itemName" required>
                                     </div>
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn" id="closeAddStockModal">Close</button>
-                                <button type="submit" form="addStockForm" class="btn">Add Stock</button>
+                                <button type="button" class="btn" id="closeAddCategoryModal">Close</button>
+                                <button type="submit" form="addStockForm" class="btn">Add Category</button>
                             </div>
                         </div>
                     </div>
@@ -228,12 +201,12 @@
     <script>
         $(document).ready(function () {
             //open add stock modal
-            $("#showAddStockModal").click(function () {
-                $("#addStockModal").modal("show");
+            $("#showAddCategoryModal").click(function () {
+                $("#addCategoryModal").modal("show");
             });
             //close add stock modal 
-            $("#closeAddStockModal").click(function () {
-                $("#addStockModal").modal("hide");
+            $("#closeAddCategoryModal").click(function () {
+                $("#addCategoryModal").modal("hide");
             });
         });
     </script>
