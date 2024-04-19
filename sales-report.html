@@ -45,7 +45,7 @@
                 <a class="nav-link " href="dashboard.html"><i class="fa fa-home"></i>Dashboard</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link active" href="manage-stock.html"><i class="fa fa-database"></i>Manage Stock</a>
+                <a class="nav-link " href="manage-stock.html"><i class="fa fa-database"></i>Manage Stock</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="sales-desk.html"><i class="fa fa-shopping-cart"></i>Sales Desk</a>
@@ -55,7 +55,7 @@
                 <a class="nav-link" href="#"><i class="fa fa-user"></i>Customers</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="sales-report"><i class="fa fa-first-order"></i>Sales Report</a>
+                <a class="nav-link active" href="sales-report.html"><i class="fa fa-first-order"></i>Sales Report</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="stock-category.html"><i class="fa fa-cog"></i>Stock Category</a>
@@ -100,10 +100,34 @@
 
                 <!-- action button -->
                 <div class="row mb-4 bg-white py-4 shadow-sm align-items-center stock-action">
-                    <div class="col ">
-                        <div class="input-group w-75">
-                           <label for="" class="p-2">From: </label> <input class="form-control" type="text"><label for="" class="p-2">To: </label>  <input class="form-control" type="text"><button class="btn">View</button>
+                    <div class="col">
+                        <div class="form-group mb-3">
+                            <label for="reportType" class="mb-2">Report Type:</label>
+                            <select class="form-control" id="reportTypeSelect" name="reportType" required>
+                                <option value="">--Select Report Type--</option>
+                                <option value="allSales">All Sales</option>
+                                <option value="dateRange">Date Range</option>
+                                <option value="cashiers">Cashiers</option>
+                                <option value="amount">Amount</option>
+                            </select>
                         </div>
+                        <div class="input-group w-75 dateRangeWrapper mb-3 d-none">
+                            <label for="startDate" class="p-2">From:</label>
+                            <input class="form-control" type="text" id="startDate" name="startDate">
+                            <label for="endDate" class="p-2">To:</label>
+                            <input class="form-control" type="text" id="endDate" name="endDate">
+                        </div>
+                        <div class="form-group w-75 cashierWrapper mb-3 d-none">
+                            <label for="cashier" class="p-2">Choose A Cashier:</label>
+                            <select class="form-control" id="cashier" name="cashier" required>
+                                <option value="">--Select Cashier--</option>
+                                <option value="Tunde">Tunde</option>
+                                <option value="Segun">Segun</option>
+                                <option value="Ade">Ade</option>
+                                <option value="Toluwa">Toluwa</option>
+                            </select>
+                        </div>
+                        <button id="generateReportBtn" class="btn shadow">Generate Report</button>
                     </div>
                 </div>
 
@@ -230,7 +254,25 @@
             $("#closeAddStockModal").click(function () {
                 $("#addStockModal").modal("hide");
             });
+
+            $('#reportTypeSelect').change(function () {
+            var selectedReportType = $(this).val();
+            if (selectedReportType === "dateRange") {
+                $('.dateRangeWrapper').removeClass('d-none');
+                $('.cashierWrapper').addClass('d-none');
+            } else if (selectedReportType === "cashiers") {
+                $('.dateRangeWrapper').addClass('d-none');
+                $('.cashierWrapper').removeClass('d-none');
+            } else {
+                $('.dateRangeWrapper').addClass('d-none');
+                $('.cashierWrapper').addClass('d-none');
+            }
         });
+
+
+        });//of document ready 
+
+
     </script>
 </body>
 

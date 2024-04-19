@@ -45,7 +45,7 @@
                 <a class="nav-link " href="dashboard.html"><i class="fa fa-home"></i>Dashboard</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link active" href="manage-stock.html"><i class="fa fa-database"></i>Manage Stock</a>
+                <a class="nav-link" href="manage-stock.html"><i class="fa fa-database"></i>Manage Stock</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="sales-desk.html"><i class="fa fa-shopping-cart"></i>Sales Desk</a>
@@ -55,13 +55,13 @@
                 <a class="nav-link" href="#"><i class="fa fa-user"></i>Customers</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="sales-report"><i class="fa fa-first-order"></i>Sales Report</a>
+                <a class="nav-link" href="sales-report.html"><i class="fa fa-first-order"></i>Sales Report</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="stock-category.html"><i class="fa fa-cog"></i>Stock Category</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="manage-user.html"><i class="fa fa-user"></i>Manage User</a>
+                <a class="nav-link active" href="manage-user.html"><i class="fa fa-user"></i>Manage User</a>
             </li>
         </ul>
     </div>
@@ -96,13 +96,16 @@
 
             <!-- dashboard main content starts  -->
             <div class="main-content p-5">
-                <h2 class="mb-4 pb-2">Stock Category</h2>
+                <div class="mb-4 pb-2 page-title">
+                    <h2>🚨 User Role</h2>
+                    <a href="manage-user.html"><i class="fa fa-arrow-left"></i> BackTo Manage User</a>
+                </div>
                 
                  <!-- action button -->
                 <div class="row mb-4 bg-white py-4 shadow-sm align-items-center">
                     <div class="col ">
-                        <button type="button" class="btn mb-2 shadow " id="showAddCategoryModal">
-                            <i class="fa fa-plus"></i> Add Category
+                        <button type="button" class="btn mb-2 shadow " id="showCreateRoleModal">
+                            <i class="fa fa-plus"></i> Create New Role
                         </button>
                     </div>
                 </div>
@@ -114,8 +117,8 @@
                             <thead>
                                 <tr>
                                     <th>S/N</th>
-                                    <th>Category-Id</th>
-                                    <th>Category Name</th>
+                                    <th>Role-Id</th>
+                                    <th>Role Type</th>
                                     <th>Date-Created</th>
                                     <th>Actions</th>
                                 </tr>
@@ -124,8 +127,8 @@
                                 <!-- Sample row, replace with data from your database -->
                                 <tr>
                                     <td>1</td>
-                                    <td>005</td>
-                                    <td>Others</td>
+                                    <td>003</td>
+                                    <td>Admin</td>
                                     <td>24-04-2024</td>
                                     <td>
                                         <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
@@ -137,7 +140,7 @@
                                 <tr>
                                     <td>1</td>
                                     <td>006</td>
-                                    <td>Food</td>
+                                    <td>Sales</td>
                                     <td>24-04-2024</td>
                                     <td>
                                         <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
@@ -152,29 +155,29 @@
                 </div>
 
                 <!-- Add Stock Modal -->
-                <div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog"
-                    aria-labelledby="addCategoryModalLabel" aria-hidden="true">
+                <div class="modal fade" id="createRoleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="createRoleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="addStockModalLabel">Add Category</h5>
+                                <h5 class="modal-title" id="createRoleModalLabel">Create New Role</h5>
                             </div>
                             <div class="modal-body">
-                                <form id="addStockForm" class="p-4">
+                                <form id="addRoleForm" class="p-4">
                                     <!-- Item Name -->
                                     <div class="form-group">
-                                        <label for="itemName">Category Name</label>
-                                        <input type="text" class="form-control" id="itemName" name="itemName" required>
+                                        <label for="roleType">Role Type</label>
+                                        <input type="text" class="form-control" id="roleType" name="roleType" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="itemName">Category description</label>
-                                        <input type="text" class="form-control" id="itemName" name="itemName" required>
+                                        <label for="itemName">Role description</label>
+                                        <input type="text" class="form-control" id="roleDescription" name="roleDescription" required>
                                     </div>
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn" id="closeAddCategoryModal">Close</button>
-                                <button type="submit" form="addStockForm" class="btn">Add Category</button>
+                                <button type="button" class="btn" id="closeCreateRoleModal">Close</button>
+                                <button type="submit" form="createRoleForm" class="btn">Add Role</button>
                             </div>
                         </div>
                     </div>
@@ -201,12 +204,12 @@
     <script>
         $(document).ready(function () {
             //open add stock modal
-            $("#showAddCategoryModal").click(function () {
-                $("#addCategoryModal").modal("show");
+            $("#showCreateRoleModal").click(function () {
+                $("#createRoleModal").modal("show");
             });
             //close add stock modal 
-            $("#closeAddCategoryModal").click(function () {
-                $("#addCategoryModal").modal("hide");
+            $("#closeCreateRoleModal").click(function () {
+                $("#createRoleModal").modal("hide");
             });
         });
     </script>

@@ -147,21 +147,21 @@ ul {
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 
-.stock-desk-title {
+.page-title {
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.stock-desk-title > h2 {
+.page-title > h2 {
   font-size: 1.2em;
 }
 
-.stock-desk-title a {
+.page-title a {
   color: var(--accent3-color);
 }
-.stock-desk-title a .fa {
+.page-title a .fa {
   color: var(--accent4-color);
 }
 
@@ -188,10 +188,10 @@ a {
   color: var(--accent4-color);
 }
 
-.stock-table {
+/* .stock-table {
   width: 100%;
   overflow-x: scroll !important;
-}
+} */
 
 .stock-table thead tr th {
   font-size: 0.9em !important;
@@ -204,8 +204,8 @@ a {
 }
 
 table {
-  width: 100% !important;
-  overflow-x: scroll !important;
+  /* width: 100% !important; */
+  /* overflow-x: scroll !important; */
 }
 
 

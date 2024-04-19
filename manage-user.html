@@ -45,7 +45,7 @@
                     <a class="nav-link " href="dashboard.html"><i class="fa fa-home"></i>Dashboard</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active" href="manage-stock.html"><i class="fa fa-database"></i>Manage Stock</a>
+                    <a class="nav-link" href="manage-stock.html"><i class="fa fa-database"></i>Manage Stock</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="sales-desk.html"><i class="fa fa-shopping-cart"></i>Sales Desk</a>
@@ -55,13 +55,13 @@
                     <a class="nav-link" href="#"><i class="fa fa-user"></i>Customers</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="sales-report"><i class="fa fa-first-order"></i>Sales Report</a>
+                    <a class="nav-link" href="sales-report.html"><i class="fa fa-first-order"></i>Sales Report</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="stock-category.html"><i class="fa fa-cog"></i>Stock Category</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="manage-user.html"><i class="fa fa-user"></i>Manage User</a>
+                    <a class="nav-link active" href="manage-user.html"><i class="fa fa-user"></i>Manage User</a>
                 </li>
             </ul>
         </div>
@@ -96,16 +96,19 @@
 
             <!-- dashboard main content starts  -->
             <div class="main-content p-3 py-5 p-md-5">
-                <h2 class="mb-4 pb-2">User Management</h2>
+                <div class="mb-4 pb-2 page-title">
+                    <h2>🚨 User's Management</h2>
+                    <a href="dashboard.html"><i class="fa fa-arrow-left"></i> return dashboard</a>
+                </div>
 
                 <!-- action button -->
                 <div class="row mb-4 bg-white py-4 shadow-sm align-items-center stock-action">
                     <div class="col ">
-                        <button type="button" class="btn mb-2 shadow " id="showAddStockModal">
+                        <button type="button" class="btn mb-2 shadow " id="showCreateUserModal">
                             <i class="fa fa-plus"></i> Create User
                         </button>
 
-                        <a href="user-roles.html"> <i class="fa fa-plus"></i> create roles</a>
+                        <a href="users-role.html"> <i class="fa fa-plus"></i> create roles</a>
 
                     </div>
                 </div>
@@ -158,48 +161,61 @@
                 </div>
 
                 <!-- Add Stock Modal -->
-                <div class="modal fade" id="addStockModal" tabindex="-1" role="dialog"
-                    aria-labelledby="addStockModalLabel" aria-hidden="true">
+                <div class="modal fade" id="createUserModal" tabindex="-1" role="dialog"
+                    aria-labelledby="createUserModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="addStockModalLabel">Add Stock</h5>
+                                <h5 class="modal-title" id="createUserModalLabel">Create User</h5>
                             </div>
                             <div class="modal-body">
-                                <form id="addStockForm" class="p-4">
-                                    <!-- Item Name -->
+                                <form id="createUserForm" class="p-4">
                                     <div class="form-group">
-                                        <label for="itemName">Item Name</label>
-                                        <input type="text" class="form-control" id="itemName" name="itemName" required>
+                                        <label for="fullName">Full Name:</label>
+                                        <input type="text" class="form-control" id="fullName" name="fullName" required>
                                     </div>
-                                    <!-- Category -->
                                     <div class="form-group">
-                                        <label for="category">Category</label>
-                                        <select class="form-control" id="category" name="category" required>
-                                            <option value="">Select Category</option>
-                                            <!-- Add options dynamically from your database -->
-                                            <option value="category1">Category 1</option>
-                                            <option value="category2">Category 2</option>
-                                            <!-- Add more options as needed -->
+                                        <label for="username">Username:</label>
+                                        <input type="text" class="form-control" id="username" name="username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password:</label>
+                                        <input type="password" class="form-control" id="password" name="password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email Address:</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contactNumber">Contact Number:</label>
+                                        <input type="tel" class="form-control" id="contactNumber" name="contactNumber" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="role">Role:</label>
+                                        <select class="form-control" id="role" name="role" required>
+                                            <option value="cashier">Cashier</option>
+                                            <option value="manager">Manager</option>
+                                            <option value="administrator">Administrator</option>
                                         </select>
                                     </div>
-                                    <!-- Quantity -->
                                     <div class="form-group">
-                                        <label for="quantity">Quantity</label>
-                                        <input type="number" class="form-control" id="quantity" name="quantity"
-                                            required>
+                                        <label for="employeeID">Employee ID:</label>
+                                        <input type="text" class="form-control" id="employeeID" name="employeeID">
                                     </div>
-                                    <!-- Unit Price -->
                                     <div class="form-group">
-                                        <label for="unitPrice">Unit Price</label>
-                                        <input type="number" class="form-control" id="unitPrice" name="unitPrice"
-                                            required>
+                                        <label for="registers">Assigned Registers:</label>
+                                        <input type="text" class="form-control" id="registers" name="registers">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="shiftSchedule">Shift Schedule:</label>
+                                        <input type="text" class="form-control" id="shiftSchedule" name="shiftSchedule">
                                     </div>
                                 </form>
+                                
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn" id="closeAddStockModal">Close</button>
-                                <button type="submit" form="addStockForm" class="btn">Add Stock</button>
+                                <button type="button" class="btn" id="closeCreateUserModal">Close</button>
+                                <button type="submit" form="createUserForm" class="btn">Create User</button>
                             </div>
                         </div>
                     </div>
@@ -226,12 +242,12 @@
     <script>
         $(document).ready(function () {
             //open add stock modal
-            $("#showAddStockModal").click(function () {
-                $("#addStockModal").modal("show");
+            $("#showCreateUserModal").click(function () {
+                $("#createUserModal").modal("show");
             });
             //close add stock modal 
-            $("#closeAddStockModal").click(function () {
-                $("#addStockModal").modal("hide");
+            $("#closeCreateUserModal").click(function () {
+                $("#createUserModal").modal("hide");
             });
         });
     </script>
