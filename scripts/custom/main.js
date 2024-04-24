@@ -1,5 +1,6 @@
 $(document).ready(function() {
     var show = false;
+   
     
     $(".toggle-sidebar").click(function() {
         if(show){
@@ -15,5 +16,4 @@ $(document).ready(function() {
         $("#addStockModal").modal("show");
       });
 
-      
   });
